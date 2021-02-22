@@ -46,7 +46,7 @@ printf("Welcome, I am Server with PID=%d,  listening on port %d and address %s.\
 
 // Continuously accept incoming connections.
 while (1) {
-  cs = accept (ss, (const struct sockaddr*) &cs_addr, &cs_addr_len);
+  cs = accept (ss, (struct sockaddr*) &cs_addr, &cs_addr_len);
   if (cs < 0) {
     perror("Error on accepting an incoming connection"); printf("cs %d\n", cs); exit(4);
   }
